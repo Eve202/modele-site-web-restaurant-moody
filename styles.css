@@ -47,6 +47,11 @@ header{
     background: linear-gradient(rgba(84,84,84,0.7),rgba(84,84,84,0.7)),url(images/background_img.png) ;
     color: white;
     padding-inline: 5%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 4;
 }
 #navBigScreen ul{
     padding: 15px 0;
@@ -88,7 +93,7 @@ header{
 #div_header{
     padding: 30px 0 50px 0;
     justify-content: space-between;
-    
+    margin-top: 60px;
 }
 #div_header .div_flex_column{
     align-items: flex-end;
@@ -341,7 +346,7 @@ div.align_right p{
     color: white;
 }
 .input_div input::-webkit-calendar-picker-indicator{
-    display: none;
+    color: var(--color-yellow-) !important;
 }
 select:-internal-list-box option:checked{
     color: var(--color-yellow-) !important;
@@ -604,8 +609,11 @@ footer ul:nth-of-type(2)
         padding: 40px 5% 50px 5%;
     }
     #blog div i{
-        font-size: 40px;}
-    
+        font-size: 40px;
+    }
+    #div_header p.align_right {
+    background: linear-gradient(90deg, transparent , var(--color-gray-) , transparent );
+}
 }
 @media ( max-width : 650px ){
     #navBigScreen{
@@ -745,7 +753,7 @@ footer ul:nth-of-type(2)
         display: flex;
         flex-direction: column;
         justify-content: center;
-        gap: 30px;
+        gap: 20px;
     }
     .input_div div {
         min-width: 400px;
